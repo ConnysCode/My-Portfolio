@@ -14,7 +14,7 @@ import { Encrypt, XP } from './Components/Projects'
 
 function App() {
   return (
-    <Router basename={'/portfolio'}>
+    <Router basename={'/'}>
       <div className="App">
         <div className="ContentWrapper">
           <Switch>
@@ -40,7 +40,7 @@ function App() {
 function Home() {
   return (
     <div>
-      <div className="Page">
+      <div className="Page Menu">
         <div className="Title">
           <h2>Hey, I'm <span className="tag">Morian</span></h2>
           <code><p className="subtitle">I'm your{` `}
@@ -57,6 +57,10 @@ function Home() {
           </a>
           <a href="https://github.com/ConnysCode/">
             <p><ChevronRightIcon className="arrow" variant="contained" color="action" />My <b className="tag">Github.</b></p>
+          </a>
+          <br/>
+          <a href="https://github.com/ConnysCode/">
+            <p><ChevronRightIcon className="arrow" variant="contained" color="action" />Contact <b className="tag">me.</b></p>
           </a>
         </div>
       </div>
@@ -111,9 +115,9 @@ function Portfolio() {
               <div className="column">
                 <a href="https://github.com/ConnysCode/jTrack">
                   <div className="imageHolder">
-                    <div className="name">jTrack.</div>
+                    <div className="name">jTrack</div>
                     <div className="portImage" id="portJTrack" />
-                    <h4>more about <span className="tag">jTrack</span>.</h4>
+                    <h4>more about <span className="tag">jTrack</span></h4>
                   </div>
                 </a>
               </div>

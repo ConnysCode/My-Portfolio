@@ -1,12 +1,12 @@
 @charset "UTF-8";
 body {
+  background-color: #1a1a2e;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .App {
-  background-color: #1a1a2e;
   text-align: center;
 }
 
@@ -61,6 +61,18 @@ img {
   transition: all .2s;
 }
 
+@media screen and (max-width: 900px) {
+  .column + .column {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 80vw !important;
+  }
+}
+
 .column .imageHolder {
   position: relative;
   display: -webkit-box;
@@ -83,6 +95,12 @@ img {
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   width: 365px;
   height: 142px;
+}
+
+@media screen and (max-width: 900px) {
+  .column .imageHolder {
+    width: 80vw !important;
+  }
 }
 
 .column .imageHolder > h4 {
@@ -125,6 +143,12 @@ img {
   background-size: cover;
 }
 
+@media screen and (max-width: 900px) {
+  .column .imageHolder .portImage {
+    width: 80vw !important;
+  }
+}
+
 .column .imageHolder .portImage#portEncrypt {
   background-image: url("https://img.namespace.media/images/2021/09/19/encrypt2.png");
   background-image: url("https://cdn.namespace.media/index.php/s/reqoGSnPjaRyprK/download");
@@ -142,50 +166,74 @@ img {
   background-image: url("https://wallpaperaccess.com/full/20999.jpg");
 }
 
-.column .imageHolder:hover {
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-
-.column .imageHolder:hover .portImage {
-  opacity: .5;
-  -webkit-filter: sepia(0.8);
-          filter: sepia(0.8);
-}
-
-.column .imageHolder:hover .name {
-  opacity: 0;
-}
-
-.column .imageHolder:hover > h4 {
-  opacity: 1;
+@media screen and (min-width: 900px) {
+  .column .imageHolder:hover {
+    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .column .imageHolder:hover .portImage {
+    opacity: .5;
+    -webkit-filter: sepia(0.8);
+            filter: sepia(0.8);
+  }
+  .column .imageHolder:hover .name {
+    opacity: 0;
+  }
+  .column .imageHolder:hover > h4 {
+    opacity: 1;
+  }
 }
 
 .ContentWrapper {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .ContentWrapper {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .ContentWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .ContentWrapper .Page {
+  margin-top: 30px;
+  margin-bottom: 50px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   width: 855px;
-  width: 45vw;
+  max-width: 90vw;
   text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  .ContentWrapper .Page {
+    max-width: 900px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ContentWrapper .Page {
+    max-width: 90% !important;
+  }
 }
 
 .ContentWrapper .Page + .Page {
@@ -196,11 +244,6 @@ img {
   margin-top: 20px;
 }
 
-.ContentWrapper .Page.TopMargin {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
 .ContentWrapper .Page .Title h2 {
   font-weight: normal;
   color: white;
@@ -208,11 +251,24 @@ img {
   margin: 0;
 }
 
+@media screen and (max-width: 600px) {
+  .ContentWrapper .Page .Title h2 {
+    font-size: 25px !important;
+  }
+}
+
 .ContentWrapper .Page p {
   line-height: 40px;
   color: #c5c5c5;
   margin: 0;
   font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .ContentWrapper .Page p {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
 }
 
 .ContentWrapper .Page p.subtitle {
@@ -253,6 +309,14 @@ a .arrow {
   margin-left: -30px;
   margin-top: 7px;
   font-size: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  a .arrow {
+    margin-top: 1px;
+    font-size: 20px;
+    margin-left: -20px;
+  }
 }
 
 a .arrow.big {
