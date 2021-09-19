@@ -1,38 +1,265 @@
+@charset "UTF-8";
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .App {
+  background-color: #1a1a2e;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tag {
+  color: #e94560;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.row > :first-child {
+  margin-right: 40px;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+}
+
+.column {
+  float: left;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.column .imageHolder {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+  width: 365px;
+  height: 142px;
+}
+
+.column .imageHolder > h4 {
+  font-size: 25px;
+  color: white;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  position: absolute;
+  opacity: 0;
+  font-family: monospace;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.column .imageHolder .name {
+  font-size: 20px;
+  color: white;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  position: absolute;
+  font-family: monospace;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  -webkit-box-shadow: 2px 2px 0px rgba(233, 69, 96, 0.8);
+          box-shadow: 2px 2px 0px rgba(233, 69, 96, 0.8);
+  background-color: rgba(26, 26, 46, 0.8);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+}
+
+.column .imageHolder .portImage {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  width: 365px;
+  height: 142px;
+  border-radius: 5px;
+  position: absolute;
+  background-size: cover;
+}
+
+.column .imageHolder .portImage#portEncrypt {
+  background-image: url("https://img.namespace.media/images/2021/09/19/encrypt2.png");
+}
+
+.column .imageHolder .portImage#portXP {
+  background-image: url("https://img.namespace.media/images/2021/09/14/xp.png");
+}
+
+.column .imageHolder:hover {
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+}
+
+.column .imageHolder:hover .portImage {
+  opacity: .5;
+  -webkit-filter: sepia(0.8);
+          filter: sepia(0.8);
+}
+
+.column .imageHolder:hover .name {
+  opacity: 0;
+}
+
+.column .imageHolder:hover > h4 {
+  opacity: 1;
+}
+
+.ContentWrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.ContentWrapper .Page {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  width: 855px;
+  width: 45vw;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ContentWrapper .Page + .Page {
+  margin-top: 80px;
 }
+
+.ContentWrapper .Page .Content {
+  margin-top: 20px;
+}
+
+.ContentWrapper .Page.TopMargin {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.ContentWrapper .Page .Title h2 {
+  font-weight: normal;
+  color: white;
+  font-size: 35.5px;
+  margin: 0;
+}
+
+.ContentWrapper .Page p {
+  line-height: 40px;
+  color: #c5c5c5;
+  margin: 0;
+  font-size: 20px;
+}
+
+.ContentWrapper .Page p.subtitle {
+  opacity: 1.0;
+}
+
+.ContentWrapper .Page p.FullText {
+  text-align: justify;
+}
+
+.ContentWrapper .Page ul {
+  line-height: 40px;
+  list-style: none;
+  color: #c5c5c5;
+  font-size: 20px;
+}
+
+.ContentWrapper .Page ul li::before {
+  content: "•";
+  color: #e94560;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover .arrow {
+  opacity: 1;
+}
+
+a .arrow {
+  color: white;
+  opacity: 0;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 7px;
+  font-size: 30px;
+}
+
+a .arrow.big {
+  opacity: 1;
+  font-size: 40px;
+  margin-left: -45px;
+  margin-top: 6px;
+}
+
+a .arrow.big:hover {
+  color: #e94560;
+}
+
+.PageText {
+  margin-top: 50px !important;
+}
+
+.PageText h3,
+.PageText h4 {
+  line-height: 0;
+  font-weight: normal;
+}
+
+.PageText h4 {
+  margin: 20px 0 20px 0;
+}
+
+.PageText img {
+  margin: 10px 0 10px 0;
+}
+
+.PageText .info {
+  background-color: rgba(21, 21, 21, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+  padding: 20px 25px 25px 25px;
+}
+/*# sourceMappingURL=App.css.map */
