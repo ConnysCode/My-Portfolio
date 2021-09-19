@@ -17,10 +17,18 @@ body {
     color: $base-color;
 }
 
+.default {
+    color: white
+}
+
 .row::after {
     content: "";
     clear: both;
     display: table;
+}
+
+a {
+    color: $base-color
 }
 
 .row {
@@ -29,6 +37,13 @@ body {
     >:first-child {
         margin-right: 40px;
     }
+}
+
+.steam {
+    box-shadow: unset;
+    width: fit-content;
+    display: table;
+    margin: 20px auto;
 }
 
 img {
@@ -44,6 +59,7 @@ img {
 
     .imageHolder {
         position: relative;
+
         >h4 {
             font-size: 25px;
             color: white;
@@ -55,7 +71,7 @@ img {
         }
 
         .name {
-            
+
             font-size: 20px;
             color: white;
             transition: opacity .2s;
@@ -83,7 +99,7 @@ img {
             // backdrop-filter: blur(2px);
             // text-align: center;
             // text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.80);
-        // box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.15);
+            // box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.15);
             // margin: 10px 0 0 0;
             padding: 8px 10px 8px 10px;
             border-radius: 5px;
@@ -100,10 +116,19 @@ img {
 
             &#portEncrypt {
                 background-image: url("https://img.namespace.media/images/2021/09/19/encrypt2.png");
+                background-image: url("https://cdn.namespace.media/index.php/s/reqoGSnPjaRyprK/download");
             }
 
             &#portXP {
                 background-image: url("https://img.namespace.media/images/2021/09/14/xp.png");
+            }
+
+            &#portJTrack {
+                background-image: url("https://img.namespace.media/images/2021/09/19/jTrack.png");
+            }
+
+            &#portSharpyCatcher {
+                background-image: url("https://wallpaperaccess.com/full/20999.jpg");
             }
 
             position: absolute;
@@ -118,6 +143,7 @@ img {
                 opacity: .5;
                 filter: sepia(.8);
             }
+
             .name {
                 opacity: 0;
             }
@@ -126,7 +152,8 @@ img {
                 opacity: 1;
             }
 
-            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
         }
 
         display: flex;
@@ -135,6 +162,7 @@ img {
         justify-content: center;
         border-radius: 5px;
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
         width: 365px;
         height: 142px;
     }

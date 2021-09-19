@@ -14,10 +14,18 @@ body {
   color: #e94560;
 }
 
+.default {
+  color: white;
+}
+
 .row::after {
   content: "";
   clear: both;
   display: table;
+}
+
+a {
+  color: #e94560;
 }
 
 .row {
@@ -28,6 +36,16 @@ body {
 
 .row > :first-child {
   margin-right: 40px;
+}
+
+.steam {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: table;
+  margin: 20px auto;
 }
 
 img {
@@ -61,6 +79,8 @@ img {
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   width: 365px;
   height: 142px;
 }
@@ -107,15 +127,24 @@ img {
 
 .column .imageHolder .portImage#portEncrypt {
   background-image: url("https://img.namespace.media/images/2021/09/19/encrypt2.png");
+  background-image: url("https://cdn.namespace.media/index.php/s/reqoGSnPjaRyprK/download");
 }
 
 .column .imageHolder .portImage#portXP {
   background-image: url("https://img.namespace.media/images/2021/09/14/xp.png");
 }
 
+.column .imageHolder .portImage#portJTrack {
+  background-image: url("https://img.namespace.media/images/2021/09/19/jTrack.png");
+}
+
+.column .imageHolder .portImage#portSharpyCatcher {
+  background-image: url("https://wallpaperaccess.com/full/20999.jpg");
+}
+
 .column .imageHolder:hover {
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
-          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .column .imageHolder:hover .portImage {

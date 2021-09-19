@@ -109,27 +109,28 @@ function Portfolio() {
           <div className="ImageContainer">
             <div className="row">
               <div className="column">
-                <Link to="/portfolio/encrypt">
+                <a href="https://github.com/ConnysCode/jTrack">
                   <div className="imageHolder">
                     <div className="name">jTrack.</div>
-                    <div className="portImage" id="portEncrypt" />
+                    <div className="portImage" id="portJTrack" />
                     <h4>more about <span className="tag">jTrack</span>.</h4>
                   </div>
-                </Link>
+                </a>
               </div>
               <div className="column">
-                <Link to="/portfolio/xp">
+                <a href="https://github.com/ConnysCode/SharpyCatcher">
                   <div className="imageHolder">
                     <div className="name">SharpyCatcher</div>
-                    <div  className="portImage" id="portXP" />
+                    <div  className="portImage" id="portSharpyCatcher" />
                     <h4>more about <span className="tag">SharpyCatcher</span>.</h4>
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   )
 }
